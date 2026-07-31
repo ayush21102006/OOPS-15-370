@@ -39,7 +39,7 @@ cout <<"After swap:";
     cout <<"Call by Reference"<< endl;
     cout <<"Before swap:";
     show(x, y);
-swapByReference(x, y);
+swapByReference(x, y) ;
 cout <<"After swap:";
     show(x, y);
     cout <<"Call by Address"<< endl;
