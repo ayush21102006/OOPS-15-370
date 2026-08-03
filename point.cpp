@@ -15,15 +15,30 @@ class Point{
         cout<<"Parameterized constructor "<<endl;
     }
 
+
     void show(){
         cout<<x<<" , "<<y<<endl;
         
     }
+
+    // Point add (Point q){
+    //     Point r;
+    //     r.x=x+q.x;
+    //     r.y=y+q.y;
+    //     return r;
+    // }
+    Point add (Point q){                                  
+        return Point(x + q.x , y + q.y);                  //nameless object creation
+    }
+
+
 };
 
 int main(){
-    Point p,q(20,50);
+    Point p(10,20),q(20,50);
     p.show();
     q.show();
+    Point r = p.add(q);
+    r.show();
     return 0;
 }
