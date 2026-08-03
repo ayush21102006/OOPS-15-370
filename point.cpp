@@ -7,23 +7,23 @@ class Point{
     int x;
     int y;
     public:
-    Point(int a ,int b){
-        x=a;
-        y=b;
+
+    Point() : x{0},y{0}{
+        cout<<"Default constructer "<<endl;
+    }  //list initialization
+    Point(int p,int q): x{p},y{q}{
+        cout<<"Parameterized constructor "<<endl;
     }
 
     void show(){
-        cout<<"X coordinate: "<<x<<endl;
-        cout<<"Y coordinate: "<<y<<endl;
+        cout<<x<<" , "<<y<<endl;
+        
     }
 };
 
 int main(){
-    int a,b;
-    cout<<"Enter x coordinate: ";
-    cin>>a;
-    cout<<"Enter y coordinate: ";
-    cin>>b;
-    Point p1(a,b);
-    p1.show();
+    Point p,q(20,50);
+    p.show();
+    q.show();
+    return 0;
 }
