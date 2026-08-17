@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void callByValue(int x) {
@@ -11,7 +11,7 @@ void callByReference(int &x) {
     cout << x << endl;
 }
 
-void callByAddress(int *x) {
+void callByAddress (int *x) {
     *x = *x + 10;
     cout << *x << endl;
 }
