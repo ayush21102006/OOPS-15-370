@@ -8,9 +8,7 @@ class Point{
     int y;
     public:
 
-    Point() : x{0},y{0}{
-        cout<<"Default constructer "<<endl;
-    }  //list initialization
+    
     Point(int p,int q): x{p},y{q}{
         cout<<"Parameterized constructor "<<endl;
     }
@@ -19,6 +17,10 @@ class Point{
     void show(){
         cout<<x<<" , "<<y<<endl;
         
+    }
+    void input(int p, int q){
+        x=p;
+        y=q;
     }
 
     // Point add (Point q){
@@ -35,10 +37,9 @@ class Point{
 };
 
 int main(){
-    Point p(10,20),q(20,50);
-    p.show();
-    q.show();
-    Point r = p.add(q);
+    Point p,q(20,50);
+    Point r=q;
     r.show();
+    q.show();
     return 0;
 }
