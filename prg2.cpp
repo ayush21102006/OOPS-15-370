@@ -1,52 +1,33 @@
 #include <iostream>
 using namespace std;
-void show(int x, int y)
-{
-    cout << "x = " << x << ", y = " << y << endl;
-}
-void swapByValue(int x, int y)
-{
-    int temp = x;
-    x = y;
-    y = temp;
 
-    cout << "Inside swapByValue(): ";
-    show(x, y);
+void callByValue(int x) {
+    x = x + 10;
+    cout << x << endl;
 }
-void swapByReference(int &x, int &y)
-{
-    int temp = x;
-    x = y;
-    y = temp;
+
+void callByReference(int &x) {
+    x = x + 10;
+    cout << x << endl;
 }
-void swapByAddress(int *x, int *y)
-{
-    int temp = *x;
-    *x = *y;
-    *y = temp;
+
+void callByAddress(int *x) {
+    *x = *x + 10;
+    cout << *x << endl;
 }
-int main()
-{
-    int x, y;
-cout << "Enter two numbers: ";
-    cin >> x >> y;
-    cout <<"Call by Value"<< endl;
-    cout <<"Before swap:";
-    show(x, y);
-swapByValue(x, y);
-cout <<"After swap:";
-    show(x, y);
-    cout <<"Call by Reference"<< endl;
-    cout <<"Before swap:";
-    show(x, y);
-swapByReference(x, y) ;
-cout <<"After swap:";
-    show(x, y);
-    cout <<"Call by Address"<< endl;
-    cout <<"Before swap:";
-    show(x, y);
-swapByAddress(&x, &y);
-cout <<"After swap:";
-    show(x, y);
-return 0;
+
+int main() {
+    int a = 10;
+    cout << a << endl;
+
+    callByValue(a);
+    cout << a << endl;
+
+    callByReference(a);
+    cout << a << endl;
+
+    callByAddress(&a);
+    cout << a << endl;
+
+    return 0;
 }
